@@ -5,9 +5,17 @@
   "idf.openOcdConfigs": [
     "board/esp32s3-builtin.cfg"
   ],
-  "idf.port": "/dev/ttyS4",
   "idf.toolsPath": "/opt/esp",
   "idf.customExtraVars": {
     "IDF_TARGET": "esp32s3"
-  }
+  },
+  /* cmake silent and relax mode -> esp-idf call cmake on his own
+  * get rid of the red line errors in CMakeLists.txt, when you can build it like:
+  *    CMake Error at PATH/TO/YOUR/PROJECT/CMakeLists.txt (idf_build_get_property):
+  *    Unknown CMake command "idf_build_get_property".
+  */
+  "cmake.configureOnOpen": false,
+  "cmake.automaticReconfigure": false,
+  "cmake.configureArgs": [],
+  "cmake.buildArgs": [],
 }
