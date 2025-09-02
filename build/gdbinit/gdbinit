@@ -1,0 +1,2 @@
+source /home/vscode/generator_control/build/gdbinit/symbols
+source /home/vscode/generator_control/build/gdbinit/connect
